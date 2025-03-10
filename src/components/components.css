@@ -1,0 +1,105 @@
+/* Input Form Styles */
+.input-form {
+  margin: 2rem 0;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-control:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+/* Mode Selector Styles */
+.mode-selector {
+  margin: 2rem 0;
+}
+
+.modes {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.mode-option {
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.mode-option:hover {
+  border-color: var(--primary-color);
+}
+
+.mode-option.selected {
+  border-color: var(--primary-color);
+  background-color: rgba(80, 201, 206, 0.1);
+}
+
+.mode-option h4 {
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+
+/* Result Display Styles */
+.result-display {
+  margin: 2rem 0;
+}
+
+.scenario {
+  padding: 1.5rem;
+  background-color: rgba(80, 201, 206, 0.1);
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* Explanation Panel Styles */
+.explanation-panel {
+  margin: 2rem 0;
+}
+
+.explanation-item {
+  padding: 1rem;
+  border-left: 3px solid var(--primary-color);
+  margin-bottom: 1rem;
+  background-color: #f8f9fa;
+}
+
+.explanation-item h4 {
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Loading and Error Styles */
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #dc3545;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: rgba(220, 53, 69, 0.1);
+  border-radius: 4px;
+  text-align: center;
+}
