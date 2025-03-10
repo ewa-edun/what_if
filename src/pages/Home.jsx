@@ -4,6 +4,8 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import InputForm from '../components/InputForm'
 import ModeSelector from '../components/ModeSelector'
+import SavedScenarios from '../components/SavedScenarios'
+import { generateScenario, saveScenario } from '../services/aiService'
 
 function Home() {
   const [formData, setFormData] = useState({
@@ -39,20 +41,15 @@ function Home() {
       setIsLoading(true)
       setError(null)
       
-      // Call backend API
-      const response = await fetch('http://localhost:5000/api/generate', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
+      // Call our AI service
+      const result = await generateScenario(
+        formData.decision,
+        formData.context,
+        formData.mode
+      )
       
-      if (!response.ok) {
-        throw new Error('Failed to generate scenario')
-      }
-      
-      const result = await response.json()
+      // Save the scenario
+      saveScenario(formData, result)
       
       // Navigate to result page with the data
       navigate('/result', { state: { formData, result } })
@@ -87,6 +84,8 @@ function Home() {
             
             {error && <div className="error-message">{error}</div>}
           </div>
+          
+          <SavedScenarios />
         </div>
       </main>
       <Footer />
