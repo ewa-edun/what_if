@@ -23,6 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 .env
-backend-dependency-fix.md
-backend-implementation-plan.md
-nebius-ai-integration-plan.md

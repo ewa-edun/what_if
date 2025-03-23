@@ -42,11 +42,9 @@
 - **Sliders/toggles** for choosing “Optimistic, Realistic, Chaotic.”  
 - **Interactive explanation panel** where AI shows reasoning.  
 
-### **🔗 API & Deployment**  
-- **Nebius Cloud** (as required by the hackathon).  
-- **Flask/FastAPI** to connect frontend & AI backend.  
+### **🔗 API & Deployment**   
 - **Database (Firebase/SQL)** to save user scenarios for future iterations.  
-
+- **Vercel**
 ---
 
 ## **3️⃣ Expansion Ideas (Post-MVP)**  
